@@ -93,10 +93,6 @@ h2 {
   }
 }
 
-.theme-menu__button:disabled {
-  opacity: 0.6;
-}
-
 /* MAIN */
 
 .card {
@@ -295,6 +291,7 @@ footer {
   mix-blend-mode: hard-light;
   text-shadow: -1px 0 var(--themes-text-stroke), 0 1px var(--themes-text-stroke),
     1px 0 var(--themes-text-stroke), 0 -1px var(--themes-text-stroke);
+  z-index: 4;
 }
 
 @supports ((-webkit-text-stroke: 1px var(--themes-text-stroke))) {
@@ -463,6 +460,7 @@ dialog::backdrop {
   padding: 10px 0;
   background: none;
   border: 2px solid var(--themes-mainColor);
+  cursor: pointer;
   position: relative;
 }
 
