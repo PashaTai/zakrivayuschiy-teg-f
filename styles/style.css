@@ -18,7 +18,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font), sans-serif;
-  font-variation-settings: 'wght' var(--main-font-text-wght);
+  font-variation-settings: "wght" var(--main-font-text-wght);
   background-color: var(--themes-background);
   color: var(--themes-mainColor);
   background-image: var(--background-gradient);
@@ -39,10 +39,10 @@
   max-width: 700px;
 }
 
-@media (width <= 375px){
-.mobile {
-  width: var(--mobile-width);
-}
+@media (width <= 375px) {
+  .mobile {
+    width: var(--mobile-width);
+  }
 }
 
 h1 {
@@ -85,11 +85,11 @@ h2 {
 
 @keyframes select {
   0% {
-    translate: 0;
+    transform: translateX(0);
   }
 
   100% {
-    translate: 4px;
+    transform: translateX(4px);
   }
 }
 
@@ -120,7 +120,7 @@ h2 {
 
 h3 {
   font-size: inherit;
-  font-variation-settings: 'wght' var(--main-font-heading-wght);
+  font-variation-settings: "wght" var(--main-font-heading-wght);
   margin: 5px 10px;
 }
 
@@ -169,9 +169,9 @@ p {
   position: absolute;
 }
 .card__like-button:hover::before {
-transform: scaleX(1);
-transition-duration: 0.5s;
-transition-timing-function: ease-in-out;
+  transform: scaleX(1);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 
 .card__like-button:focus-visible {
@@ -211,7 +211,6 @@ transition-timing-function: ease-in-out;
   transition-timing-function: ease;
 }
 
-
 /* FOOTER */
 
 footer {
@@ -246,10 +245,10 @@ footer {
   .button-save {
     flex-direction: row;
   }
-    .floppy {
-      height: 21px;
-      width: 21px;
-    }
+  .floppy {
+    height: 21px;
+    width: 21px;
+  }
 }
 
 .button-save::before {
@@ -265,9 +264,9 @@ footer {
   position: absolute;
 }
 .button-save:hover::before {
-transform: scaleX(1);
-transition-duration: 0.5s;
-transition-timing-function: ease-in-out;
+  transform: scaleX(1);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 
 .button-save:focus-visible {
@@ -276,7 +275,7 @@ transition-timing-function: ease-in-out;
   transition-timing-function: ease;
 }
 
-/* LABEL */ 
+/* LABEL */
 .card-label {
   position: relative;
 }
@@ -291,23 +290,20 @@ transition-timing-function: ease-in-out;
   text-transform: uppercase;
   position: absolute;
   top: clamp(1.4375rem, 1.3935rem + 0.1878vw, 1.5625rem);
-  right: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem); 
+  right: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
   opacity: 0.5;
   mix-blend-mode: hard-light;
-  text-shadow:
-  -1px 0 var(--themes-text-stroke), 
-  0 1px var(--themes-text-stroke), 
-  1px 0 var(--themes-text-stroke), 
-  0 -1px var(--themes-text-stroke);
+  text-shadow: -1px 0 var(--themes-text-stroke), 0 1px var(--themes-text-stroke),
+    1px 0 var(--themes-text-stroke), 0 -1px var(--themes-text-stroke);
 }
 
-@supports((-webkit-text-stroke: 1px var(--themes-text-stroke))) {
+@supports ((-webkit-text-stroke: 1px var(--themes-text-stroke))) {
   .label {
-      -webkit-text-stroke: 1px var(--themes-text-stroke);
-      -webkit-text-stroke-color: var(--themes-text-stroke);
-      text-shadow: none;
+    -webkit-text-stroke: 1px var(--themes-text-stroke);
+    -webkit-text-stroke-color: var(--themes-text-stroke);
+    text-shadow: none;
   }
-} 
+}
 
 /* EFFECTS__NAVIGATION */
 
@@ -318,7 +314,7 @@ transition-timing-function: ease-in-out;
   transition-timing-function: ease;
 }
 
-.theme-menu__button:disabled{
+.theme-menu__button:disabled {
   pointer-events: none;
   opacity: 0.6;
 }
@@ -400,7 +396,7 @@ button:focus {
   animation: sparks-opacity 0.3s ease-in 0.3s alternate;
 }
 
- .contour {
+.contour {
   fill: var(--contour-color);
   transition: fill 0.1s linear;
 }
@@ -483,9 +479,9 @@ dialog::backdrop {
   position: absolute;
 }
 .button-dialog-card:hover::before {
-transform: scaleX(1);
-transition-duration: 0.5s;
-transition-timing-function: ease-in-out;
+  transform: scaleX(1);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 
 .button-dialog-card:focus-visible {
@@ -497,7 +493,7 @@ transition-timing-function: ease-in-out;
 /* FILTER */
 
 .playlist {
-  filter:brightness(110%);
+  filter: brightness(110%);
 }
 
 .motivation {
@@ -513,19 +509,17 @@ transition-timing-function: ease-in-out;
 }
 
 .psy {
-  filter:contrast(120%);
+  filter: contrast(120%);
 }
 
 .cry {
   filter: grayscale(0.8);
-  
 }
 
 .work {
-  filter:opacity(0.8);
+  filter: opacity(0.8);
 }
 
 .study {
   filter: brightness(120%) hue-rotate(45deg) saturate(90%);
 }
-
