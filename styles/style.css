@@ -15,6 +15,7 @@
 */
 
 .page {
+  background-position: center center;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font), sans-serif;
@@ -23,7 +24,8 @@
   color: var(--themes-mainColor);
   background-image: var(--background-gradient);
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* HEADER */
@@ -34,7 +36,7 @@
   flex-direction: column;
   align-items: center;
   margin: 100px auto 100px;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   text-transform: uppercase;
   max-width: 700px;
 }
@@ -45,13 +47,14 @@
   }
 }
 
-h1 {
+.logotype-link {
+  text-decoration: none;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   margin-top: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
   margin-bottom: 20px;
 }
 
-h2 {
+.h1 {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   margin-bottom: 25px;
 }
@@ -65,7 +68,6 @@ h2 {
   justify-content: flex-end;
   margin-left: 20px;
   margin-bottom: 25px;
-  position: relative;
 }
 
 .theme-menu__button {
@@ -76,21 +78,16 @@ h2 {
   font-size: 14px;
 }
 
+.theme-menu__list {
+  position: relative;
+}
+
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
+  left: -18px;
   right: 90px;
   animation: select 0.5s ease-in-out infinite alternate;
-}
-
-@keyframes select {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(4px);
-  }
 }
 
 /* MAIN */
@@ -110,11 +107,11 @@ h2 {
   border-bottom: 2px solid var(--themes-mainColor);
   width: 100%;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 
-h3 {
+.card-heading {
   font-size: inherit;
   font-variation-settings: "wght" var(--main-font-heading-wght);
   margin: 5px 10px;
@@ -144,15 +141,22 @@ p {
 }
 
 .card__like-button {
+  width: 130px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.button {
   background: none;
   border: 2px solid var(--themes-mainColor);
-  width: 130px;
   padding: 5px 0;
   cursor: pointer;
   position: relative;
 }
 
-.card__like-button::before {
+.button::before {
   content: "";
   display: block;
   top: 0;
@@ -163,21 +167,19 @@ p {
   transform: scaleX(0);
   transform-origin: left center;
   position: absolute;
+  transition: transform 0.5s ease-in-out;
 }
-.card__like-button:hover::before {
+.button:hover::before {
   transform: scaleX(1);
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
 }
 
-.card__like-button:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px 0px 0px var(--themes-mainColor);
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .button__text {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   color: var(--blend-color);
   mix-blend-mode: difference;
@@ -207,9 +209,9 @@ p {
   transition-timing-function: ease;
 }
 
-/* FOOTER */
+/* SAVE CARD */
 
-footer {
+.card-save {
   margin: 0 auto 100px;
   background-color: var(--themes-background);
   border: 2px solid var(--themes-mainColor);
@@ -221,6 +223,11 @@ footer {
   width: 28px;
   color: var(--blend-color);
   mix-blend-mode: difference;
+}
+
+.button-save:focus-visible {
+  box-shadow: 4px 4px 0px 0px var(--themes-mainColor);
+  transition: box-shadow 0.3s ease;
 }
 
 .button-save {
@@ -247,30 +254,6 @@ footer {
   }
 }
 
-.button-save::before {
-  content: "";
-  display: block;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: var(--themes-mainColor);
-  transform: scaleX(0);
-  transform-origin: left center;
-  position: absolute;
-}
-.button-save:hover::before {
-  transform: scaleX(1);
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
-}
-
-.button-save:focus-visible {
-  box-shadow: 3px 3px 0px 0px var(--themes-mainColor);
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
-}
-
 /* LABEL */
 .card-label {
   position: relative;
@@ -278,7 +261,7 @@ footer {
 
 .label {
   color: var(--Themes-mainColor);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -294,10 +277,12 @@ footer {
   z-index: 4;
 }
 
-@supports ((-webkit-text-stroke: 1px var(--themes-text-stroke))) {
+@supports ((text-stroke 1px var(--themes-text-stroke)) or
+    (-webkit-text-stroke: 1px var(--themes-text-stroke))) {
   .label {
     -webkit-text-stroke: 1px var(--themes-text-stroke);
     -webkit-text-stroke-color: var(--themes-text-stroke);
+    text-stroke: 1px var(--themes-text-stroke);
     text-shadow: none;
   }
 }
@@ -307,8 +292,7 @@ footer {
 .theme-menu__button:hover {
   opacity: 0.6;
   cursor: pointer;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:disabled {
@@ -325,104 +309,23 @@ footer {
   opacity: 0.6;
   transform: scaleX(0);
   transform-origin: left center;
+  transition: transform 0.3s ease;
+}
+
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:focus-visible::after {
   transform: scaleX(1);
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
-}
-
-button:focus {
-  outline: none;
-}
-
-/* HEART */
-
-.sparks {
-  opacity: 0;
-}
-
-.like-icon .main-body {
-  fill: var(--themes-background);
-  transition: fill 0.3s 0.05s linear;
-}
-
-.like-icon:hover:not(.is-liked) .main-body {
-  fill: var(--contour-color);
-}
-
-.like-icon .core {
-  fill: var(--themes-background);
-  transition: fill 0.3s 0.03s linear;
-}
-
-.like-icon:hover:not(.is-liked) .core {
-  fill: var(--contour-color);
-}
-
-.like-icon:active .core {
-  fill: var(--sparks-fill-color);
-}
-
-.like-icon:active .main-body {
-  fill: var(--sparks-fill-color);
-}
-
-.is-liked .core {
-  fill: var(--sparks-fill-color);
-  transition: fill 0.3s 0.03s linear;
-}
-
-.is-liked .main-body {
-  fill: var(--sparks-fill-color);
-  transition: fill 0.3s 0.05s linear;
-}
-
-.is-liked .contour {
-  fill: var(--sparks-fill-color);
-  transition: fill 0.3s 0.06s linear;
-}
-
-.is-liked .heart {
-  animation: heart-scale 0.3s ease-in 0.1s alternate;
-  transform-origin: 50% 50%;
-}
-
-.is-liked .sparks {
-  animation: sparks-opacity 0.3s ease-in 0.3s alternate;
-}
-
-.contour {
-  fill: var(--contour-color);
-  transition: fill 0.1s linear;
-}
-
-@keyframes heart-scale {
-  0% {
-    scale: 1;
-  }
-
-  100% {
-    scale: 1.5;
-  }
-}
-
-@keyframes sparks-opacity {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }
 
 /* DIOLOG */
 
 .card__dialog {
   padding: 30px 30px;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   background-color: var(--themes-background);
   font-size: 14px;
   color: var(--themes-mainColor);
@@ -448,6 +351,7 @@ dialog::backdrop {
 
 .card__diolog-text {
   width: clamp(12.375rem, 11.5827rem + 3.3803vw, 14.625rem);
+  text-transform: uppercase;
 }
 
 .card__diolog-container-text .floppy {
@@ -457,67 +361,38 @@ dialog::backdrop {
 
 .button-dialog-card {
   width: 100%;
-  padding: 10px 0;
-  background: none;
-  border: 2px solid var(--themes-mainColor);
-  cursor: pointer;
-  position: relative;
-}
-
-.button-dialog-card::before {
-  content: "";
-  display: block;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: var(--themes-mainColor);
-  transform: scaleX(0);
-  transform-origin: left center;
-  position: absolute;
-}
-.button-dialog-card:hover::before {
-  transform: scaleX(1);
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
-}
-
-.button-dialog-card:focus-visible {
-  box-shadow: 3px 3px 0px 0px var(--themes-mainColor);
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
 }
 
 /* FILTER */
 
-.playlist {
+.filter-brightness {
   filter: brightness(110%);
 }
 
-.motivation {
+.filter-sepia {
   filter: sepia(40%);
 }
 
-.happy {
+.filter-saturate {
   filter: saturate(170%);
 }
 
-.code {
+.filter-hue-rotate {
   filter: hue-rotate(90deg);
 }
 
-.psy {
+.filter-contrast {
   filter: contrast(120%);
 }
 
-.cry {
+.filter-grayscale {
   filter: grayscale(0.8);
 }
 
-.work {
+.filter-opacity {
   filter: opacity(0.8);
 }
 
-.study {
+.filter-brightness-hue-rotate-saturate {
   filter: brightness(120%) hue-rotate(45deg) saturate(90%);
 }

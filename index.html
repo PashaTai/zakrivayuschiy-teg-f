@@ -18,8 +18,8 @@
   </head>
   <body class="page">
     <header class="header mobile">
-      <h1>&lt;/html&gt;</h1>
-      <h2>закрывающий тег</h2>
+      <a class="logotype-link">&lt;/html&gt;</a>
+      <h1 class="h1">закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -47,17 +47,19 @@
       </nav>
     </header>
     <main>
-      <section class="card mobile">
-        <h3>Фритрек и нулевой спринт: Подготовка к работе</h3>
+      <article class="card mobile">
+        <h2 class="card-heading">
+          Фритрек и нулевой спринт: Подготовка к работе
+        </h2>
         <div class="card-label">
           <span class="label">welcome</span>
           <img
-            class="card-image playlist"
+            class="card-image filter-brightness"
             src="./images/life-of-coder.webp"
             alt="Обложка плейлиста с надписью 'THE LIFE OF CODER' в верхней части на фиолетовом фоне. Под надписью изображен монохромный силуэт гор. Внизу добавлены тексты: '2023 PASHA T.' и 'Плейлист для беспечного занятия кодингом. Один раз послушал — семь раз покодил.'"
           />
         </div>
-        <article class="card-article">
+        <div class="card-article">
           <p>
             Это было самое начало пути. На этом этапе важно было проникнуться
             основами и настроиться на учёбу. И, возможно, подумать, как новые
@@ -68,9 +70,9 @@
             пугал, но после первых часов, я освоился и не заметил как просидел 5
             часов, верстая свою первую обложку для плейлиста
           </p>
-        </article>
+        </div>
         <div class="buttons">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               class="like-icon"
               width="39"
@@ -103,22 +105,22 @@
               />
             </svg>
           </button>
-          <button class="card__like-button">
+          <button class="card__like-button button" type="button">
             <span class="button__text"> Like </span>
           </button>
         </div>
-      </section>
-      <section class="card mobile">
-        <h3>1 спринт: Я — чистый лист</h3>
+      </article>
+      <article class="card mobile">
+        <h2 class="card-heading">1 спринт: Я — чистый лист</h2>
         <div class="card-label">
           <span class="label">carry on</span>
           <img
-            class="card-image motivation"
+            class="card-image filter-sepia"
             src="./images/motivation.png"
             alt="Мем с изображением кота, сидящего в необычной позе, с текстом 'МОТИВАЦИЯ НЕ МОТИВИРУЕТ' размещенным вверху и внизу фотографии"
           />
         </div>
-        <article class="card-article">
+        <div class="card-article">
           <p>
             На первых этапах мы работали со страхами и сомнениями, которые часто
             испытывают новички. Один из них — страх перед чистым листом. Это,
@@ -130,9 +132,9 @@
             Много занятий в тренажере, Пачка и первый академ, было над чем
             подумать, но не хотелось бросать так и не дойдя до конца спринта.
           </p>
-        </article>
+        </div>
         <div class="buttons">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               class="like-icon"
               width="39"
@@ -165,31 +167,31 @@
               />
             </svg>
           </button>
-          <button class="card__like-button">
+          <button class="card__like-button button" type="button">
             <span class="button__text"> Like </span>
           </button>
         </div>
-      </section>
-      <section class="card mobile">
-        <h3>1 спринт: А если не получится?</h3>
+      </article>
+      <article class="card mobile">
+        <h2 class="card-heading">1 спринт: А если не получится?</h2>
         <div class="card-label">
           <span class="label">done</span>
           <img
-            class="card-image happy"
+            class="card-image filter-saturate"
             src="./images/happy.jpeg"
             alt="Счастливый полосатый кот с закрытыми глазами, улыбающийся и наслаждающийся поглаживанием человека, который держит его за лапки"
           />
         </div>
-        <article class="card-article">
+        <div class="card-article">
           <p>
             Первый проект — позади! Но это всё ещё самое начало пути. Радость
             могла быстро померкнуть и смениться ожиданием провала. Или вы,
             наоборот, могли вдохновиться успехами и поверить в себя.
           </p>
           <p>Я был невероятно рад, когда получилось закрыть первый спринт :)</p>
-        </article>
+        </div>
         <div class="buttons">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               class="like-icon"
               width="39"
@@ -222,22 +224,22 @@
               />
             </svg>
           </button>
-          <button class="card__like-button">
+          <button class="card__like-button button" type="button">
             <span class="button__text"> Like </span>
           </button>
         </div>
-      </section>
-      <section class="card mobile">
-        <h3>2 спринт: Погоня за идеалом</h3>
+      </article>
+      <article class="card mobile">
+        <h2 class="card-heading">2 спринт: Погоня за идеалом</h2>
         <div class="card-label">
           <span class="label">i am coder</span>
           <img
-            class="card-image code"
+            class="card-image filter-hue-rotate"
             src="./images/cat-code.png"
             alt="Серый британский кот сосредоточенно смотрит вперед, лапа на клавиатуре с подсветкой, создавая впечатление, что он готов к написанию кода"
           />
         </div>
-        <article class="card-article">
+        <div class="card-article">
           <p>
             На этом этапе вы уже достаточно разбирались в основах вёрстки, чтобы
             понять, как много ещё впереди. Вы могли попытаться погнаться за
@@ -249,9 +251,9 @@
             Второй спринт дался мне намного легче, я подумал что я мега-круто
             умею кодить и поверил в себя!
           </p>
-        </article>
+        </div>
         <div class="buttons">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               class="like-icon"
               width="39"
@@ -284,22 +286,22 @@
               />
             </svg>
           </button>
-          <button class="card__like-button">
+          <button class="card__like-button button" type="button">
             <span class="button__text"> Like </span>
           </button>
         </div>
-      </section>
-      <section class="card mobile">
-        <h3>2 спринт: О тех, кто рядом</h3>
+      </article>
+      <article class="card mobile">
+        <h2 class="card-heading">2 спринт: О тех, кто рядом</h2>
         <div class="card-label">
           <span class="label">Cat</span>
           <img
-            class="card-image psy"
+            class="card-image filter-contrast"
             src="./images/cat-psy.png"
             alt="Женщина лежит на зеленом диване и смотрит вверх, жестикулируя рукой, в то время как рыжий кот сидит на зеленом стуле напротив нее, внимательно смотря на открытую тетрадь, словно проводит терапевтическую сессию"
           />
         </div>
-        <article class="card-article">
+        <div class="card-article">
           <p>
             Всё это время вы были не одиноки (хотя, возможно, иногда и
             чувствовали, что одни против целого мира). Вас окружали
@@ -309,9 +311,9 @@
             правда ли?
           </p>
           <p>Мой Кот - Моя Крепость</p>
-        </article>
+        </div>
         <div class="buttons">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               class="like-icon"
               width="39"
@@ -344,22 +346,22 @@
               />
             </svg>
           </button>
-          <button class="card__like-button">
+          <button class="card__like-button button" type="button">
             <span class="button__text"> Like </span>
           </button>
         </div>
-      </section>
-      <section class="card mobile">
-        <h3>3 спринт: Обходные стратегии</h3>
+      </article>
+      <article class="card mobile">
+        <h2 class="card-heading">3 спринт: Обходные стратегии</h2>
         <div class="card-label">
           <span class="label">&lt;cry&gt;</span>
           <img
-            class="card-image cry"
+            class="card-image filter-grayscale"
             src="./images/cat-cry.png"
             alt="Маленький котенок с грустным выражением лица, сидящий на синей ткани, с мокрыми, как будто от слез, большими глазами, смотрящий прямо в камеру"
           />
         </div>
-        <article class="card-article">
+        <div class="card-article">
           <p>
             На этом курсе вы постоянно решали разные задачи. В какой-то момент
             вам могло показаться, что решения просто иссякли. Значит, пришло
@@ -371,9 +373,9 @@
             всеми углами, но проблема не решеалсь. Ответ был прост, нехватало
             одного самого важного угла стрелочки тега в конце html >
           </p>
-        </article>
+        </div>
         <div class="buttons">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               class="like-icon"
               width="39"
@@ -406,22 +408,22 @@
               />
             </svg>
           </button>
-          <button class="card__like-button">
+          <button class="card__like-button button" type="button">
             <span class="button__text"> Like </span>
           </button>
         </div>
-      </section>
-      <section class="card mobile">
-        <h3>3 спринт: Когда опускаются руки</h3>
+      </article>
+      <article class="card mobile">
+        <h2 class="card-heading">3 спринт: Когда опускаются руки</h2>
         <div class="card-label">
           <span class="label">work</span>
           <img
-            class="card-image work"
+            class="card-image filter-opacity"
             src="./images/cat-why.png"
             alt="Черный кот с блестящими глазами, сидящий перед открытым ноутбуком на кровати с бежевым постельным бельем, смотрящий в камеру с удивленным или вопросительным выражением лица"
           />
         </div>
-        <article class="card-article">
+        <div class="card-article">
           <p>
             Во время учёбы часто возникает чувство, когда не знаешь, за что
             хвататься. Вроде и проектную пора сдавать, и задачи хочется
@@ -433,9 +435,9 @@
             Я каждый раз вспоминал зачем я все это делаю - это в определенной
             степени помогало держать фокус
           </p>
-        </article>
+        </div>
         <div class="buttons">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               class="like-icon"
               width="39"
@@ -468,22 +470,22 @@
               />
             </svg>
           </button>
-          <button class="card__like-button">
+          <button class="card__like-button button" type="button">
             <span class="button__text"> Like </span>
           </button>
         </div>
-      </section>
-      <section class="card mobile">
-        <h3>«Сейчас я здесь»</h3>
+      </article>
+      <article class="card mobile">
+        <h2 class="card-heading">«Сейчас я здесь»</h2>
         <div class="card-label">
           <span class="label">study</span>
           <img
-            class="card-image study"
+            class="card-image filter-brightness-hue-rotate-saturate"
             src="./images/cat-study.png"
             alt="Мем с маленьким белым котенком, сидящим на диване. Вокруг котенка слова, описывающие различные аспекты жизни студента: 'фильмы', 'сериалы', 'мемы', 'фото котиков' расположены слева, и 'учеба', 'экзамены', 'сессия', 'стресс' справа, с 'Я' в центре, указывающим на котенка."
           />
         </div>
-        <article class="card-article">
+        <div class="card-article">
           <p>
             Сейчас вы уже очень много знаете о вёрстке. Но это только начало.
             Во-первых, впереди ещё много материала про «красотищу». Во-вторых, с
@@ -493,9 +495,9 @@
             и есть результат.
           </p>
           <p>Учиться, Учиться и еще раз Учиться...</p>
-        </article>
+        </div>
         <div class="buttons">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               class="like-icon"
               width="39"
@@ -528,14 +530,14 @@
               />
             </svg>
           </button>
-          <button class="card__like-button">
+          <button class="card__like-button button" type="button">
             <span class="button__text"> Like </span>
           </button>
         </div>
-      </section>
-      <footer>
+      </article>
+      <div class="card-save">
         <button
-          class="button-save"
+          class="button-save button"
           type="button"
           onclick="window['dialog'].showModal();"
           aria-controls="dialog"
@@ -543,11 +545,11 @@
           <svg class="floppy">
             <use href="./svg/floppy.svg#floppy"></use>
           </svg>
-          <span class="button__text">Сохранить на память</span>
+          <span class="button__text">Сохранить на&nbsp;память</span>
         </button>
-      </footer>
+      </div>
       <dialog class="card__dialog" id="dialog">
-        <form>
+        <form method="dialog">
           <div class="card__dialog-container">
             <div class="card__diolog-container-text">
               <svg class="floppy">
@@ -558,8 +560,8 @@
               </p>
             </div>
             <button
-              class="button-dialog-card"
-              type="button"
+              class="button-dialog-card button"
+              type="submit"
               onclick="window['dialog'].close()"
             >
               <span class="button__text">ОК</span>
